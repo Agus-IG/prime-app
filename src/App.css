@@ -1,0 +1,38 @@
+.layout {
+    width: 1366px;
+    height: 768px;
+    display: grid;
+    grid:
+      "header header header" auto
+      "leftSide body rightSide" 1fr
+      "footer footer footer" auto
+      / 10% 1fr 10%;
+  }
+
+.header {
+    background-color: var(--indigo-900);
+    grid-area: header;
+}
+
+.leftSide {
+    grid-area: leftSide;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--indigo-200);
+}
+
+.body {
+    grid-area: body;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightSide {
+    grid-area: rightSide;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgba(0,0,0,0.9);
+}
